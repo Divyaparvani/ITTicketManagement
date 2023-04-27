@@ -1,0 +1,6 @@
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Services\bin\Debug\ITMS.Services.dll
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Services\bin\Debug\ITMS.Services.pdb
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Services\obj\Debug\ITMS.Services.csproj.AssemblyReference.cache
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Services\obj\Debug\ITMS.Services.csproj.CoreCompileInputs.cache
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Services\obj\Debug\ITMS.Services.dll
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Services\obj\Debug\ITMS.Services.pdb

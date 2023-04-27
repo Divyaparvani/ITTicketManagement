@@ -1,0 +1,12 @@
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\bin\Debug\ITMS.Data.dll.config
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\bin\Debug\ITMS.Data.dll
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\bin\Debug\ITMS.Data.pdb
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\bin\Debug\EntityFramework.dll
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\bin\Debug\EntityFramework.xml
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\obj\Debug\ITMS.Data.csproj.AssemblyReference.cache
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\obj\Debug\ITMS.Data.csproj.CoreCompileInputs.cache
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\obj\Debug\ITMS.Data.csproj.CopyComplete
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\obj\Debug\ITMS.Data.dll
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\obj\Debug\ITMS.Data.pdb

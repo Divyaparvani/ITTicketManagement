@@ -1,0 +1,6 @@
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Model\bin\Debug\ITMS.Model.dll
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Model\bin\Debug\ITMS.Model.pdb
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Model\obj\Debug\ITMS.Model.csproj.AssemblyReference.cache
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Model\obj\Debug\ITMS.Model.csproj.CoreCompileInputs.cache
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Model\obj\Debug\ITMS.Model.dll
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Model\obj\Debug\ITMS.Model.pdb
