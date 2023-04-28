@@ -4,3 +4,11 @@ D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Services\obj\Debug\ITMS.S
 D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Services\obj\Debug\ITMS.Services.csproj.CoreCompileInputs.cache
 D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Services\obj\Debug\ITMS.Services.dll
 D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Services\obj\Debug\ITMS.Services.pdb
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Services\bin\Debug\ITMS.Data.dll
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Services\bin\Debug\ITMS.Model.dll
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Services\bin\Debug\EntityFramework.dll
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Services\bin\Debug\ITMS.Data.pdb
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Services\bin\Debug\ITMS.Data.dll.config
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Services\bin\Debug\ITMS.Model.pdb
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Services\bin\Debug\EntityFramework.xml
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Services\obj\Debug\ITMS.Services.csproj.CopyComplete

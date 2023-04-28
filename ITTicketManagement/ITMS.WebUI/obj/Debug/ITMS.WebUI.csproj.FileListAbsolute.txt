@@ -77,3 +77,12 @@ D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.WebUI\obj\Debug\ITMS.WebU
 D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.WebUI\obj\Debug\ITMS.WebUI.csproj.CopyComplete
 D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.WebUI\obj\Debug\ITMS.WebUI.dll
 D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.WebUI\obj\Debug\ITMS.WebUI.pdb
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.WebUI\bin\ITMS.Data.dll
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.WebUI\bin\ITMS.Model.dll
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.WebUI\bin\ITMS.Services.dll
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.WebUI\bin\EntityFramework.dll
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.WebUI\bin\ITMS.Data.pdb
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.WebUI\bin\ITMS.Data.dll.config
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.WebUI\bin\ITMS.Model.pdb
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.WebUI\bin\ITMS.Services.pdb
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.WebUI\bin\EntityFramework.xml

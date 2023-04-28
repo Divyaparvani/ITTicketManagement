@@ -56,5 +56,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ITMS.Model\ITMS.Model.csproj">
+      <Project>{69ac72fc-cae1-4fb6-ae76-1a71bb77a99e}</Project>
+      <Name>ITMS.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

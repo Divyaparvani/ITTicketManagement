@@ -43,5 +43,15 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ITMS.Data\ITMS.Data.csproj">
+      <Project>{4e43e708-35dc-45c4-8d4d-4391aa29ccd1}</Project>
+      <Name>ITMS.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITMS.Model\ITMS.Model.csproj">
+      <Project>{69ac72fc-cae1-4fb6-ae76-1a71bb77a99e}</Project>
+      <Name>ITMS.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
