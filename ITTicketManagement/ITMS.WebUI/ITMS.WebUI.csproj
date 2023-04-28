@@ -131,6 +131,10 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\logo1.png" />
+    <Content Include="Css\style.css" />
+    <Content Include="Css\StyleSheet1.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -179,6 +183,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ITMS.Data\ITMS.Data.csproj">
+      <Project>{4e43e708-35dc-45c4-8d4d-4391aa29ccd1}</Project>
+      <Name>ITMS.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITMS.Model\ITMS.Model.csproj">
+      <Project>{69ac72fc-cae1-4fb6-ae76-1a71bb77a99e}</Project>
+      <Name>ITMS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITMS.Services\ITMS.Services.csproj">
+      <Project>{cad13237-6b58-4ea2-b81c-df66a2fb29a6}</Project>
+      <Name>ITMS.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
