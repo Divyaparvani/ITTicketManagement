@@ -5,14 +5,14 @@
     background: #000;
     padding: 20px;
     background-color: #7b108d;
-   /* color: white;*/
+    color: white;
 }   
 
 
 .sidenav a, .dropdown-btn {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     color: white;
     display: block;
     border: none;
@@ -36,7 +36,7 @@ body {
     background-color: #f2e7f5;
 }
 
-/*Add an active class to the active dropdown button  */ 
+Add an active class to the active dropdown button   
 .active {
     background-color: none;
     color: white;
@@ -54,7 +54,6 @@ body {
     float: right;
     padding-right: 8px;
 }
-
 
 /*@media screen and (max-height: 450px) {*/
     .sidenav {
@@ -89,10 +88,11 @@ body {
     background-color: #cea1e6;
 }
 
-    .detailsSection {
-        padding: 30px;
-        background-color: none;
+.detailsSection {
+     padding: 30px;
+     background-color: none;
     }
+
 .logo {
     float: left;
     position: relative;
@@ -107,5 +107,11 @@ body {
     color:white;
     font-size:18px;
     margin:1000px;
+    background-image:src("~/Content/images/logo.png")
 }
-  /*}*/
+
+.bodyimage {
+    background-color: #f2e7f5;
+}
+
+/*  }*/
