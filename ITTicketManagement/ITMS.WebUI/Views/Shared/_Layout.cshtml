@@ -3,40 +3,105 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - ITMS</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Css/StyleSheet1.css")
+    <link rel="stylesheet" href="~/Css/login.css">
+    <link rel="stylesheet" href="~/Css/style.css" />
+    <link rel="stylesheet" href="~/Css/StyleSheet1.css" />
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+    <div class="mainDiv">
+       
+        <div class="sidenavSection">
+
+            <ul class="sidenav">
+
+                <img class="logo" src="~/Content/images/logo1.png" />
+
+                <li><a href="@Url.Action("Index", "Home")">Dashboard</a></li>
+                <li> <a href="@Url.Action("Index", "Home")">Settings</a></li>
+
+
+                <button class="dropdown-btn">
+                    System
+                   <i class="glyphicon glyphicon-chevron-down"></i>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+
+
+                <div class="dropdown-container">
+                    <a href="#">User</a>
+                    <a href="#">Role</a>
+                    <a href="#">CommonLookup</a>
+
+                </div>
+
+            </ul>
+
+        </div>
+
+        <div class="mainSection">
+            <header class="header">
+                        <div class="userInfo">
+                        <div class="align-center">
+                            
+                        @if (Session["Email"] != null)
+                        {
+                                <div class="userName align-center">
+                                    <span>@Session["Email"]</span>
+                                    <div class="userInfoDiv">
+                                        <div class="userInfoBox">
+                                            
+                                            @Html.ActionLink("LogOff", "LogOff", "Account")
+                                            @* @Html.ActionLink("FormMst","Index","FormMst")*@
+
+                                        </div>   
+                                   </div>
+                                </div>
+                        }
+                            </div>
+                           
+                            </div>
+                   
+            </header>
+            <div class="detailsSection">
+
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <script>
+
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+
+    </script>
+ 
+<div class="container">
+    @RenderBody()
+    <hr />
+    <footer>
+        <!--<p>&copy; @DateTime.Now.Year - My ASP.NET Application</p-->@*>*@
+    </footer>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
 </body>
 </html>

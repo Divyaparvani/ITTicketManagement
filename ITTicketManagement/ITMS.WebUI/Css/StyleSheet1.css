@@ -1,0 +1,117 @@
+﻿
+.sidenav {
+    height: 100vh;
+    width: auto;
+    background: #000;
+    padding: 20px;
+    background-color: #7b108d;
+    color: white;
+}   
+
+
+.sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    
+}
+
+   
+.sidenav a:hover, .dropdown-btn:hover {
+    color: white;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f2e7f5;
+}
+
+Add an active class to the active dropdown button   
+.active {
+    background-color: none;
+    color: white;
+}
+
+
+.dropdown-container {
+    display: none;
+    padding-left: 8px;
+    width: auto;
+}
+
+
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+
+/*@media screen and (max-height: 450px) {*/
+    .sidenav {
+        padding-top: 15px;
+        color: white;
+       
+    }
+
+    .sidenav a {
+        font-size: 18px;
+        color: white;
+    }
+
+    .mainDiv {
+        display: flex;
+    }
+
+    .sidenavSection {
+        max-width: 220px ;
+        flex-basis: 220px;
+        color: white;
+    }
+
+    .mainSection {
+        max-width: calc(100% - 220px);
+        flex-basis: calc(100% - 220px);
+    }
+
+.header.header {
+    background: #ccc;
+    padding: 30px;
+    background-color: #cea1e6;
+}
+
+.detailsSection {
+     padding: 30px;
+     background-color: none;
+    }
+
+.logo {
+    float: left;
+    position: relative;
+   
+    margin-right: 50%;
+    text-align: center;
+    margin: -39px 15px 20px -20px; 
+    height: 150px;
+    padding: 25px;
+}
+.login{
+    color:white;
+    font-size:18px;
+    margin:1000px;
+    background-image:src("~/Content/images/logo.png")
+}
+
+.bodyimage {
+    background-color: #f2e7f5;
+}
+
+/*  }*/

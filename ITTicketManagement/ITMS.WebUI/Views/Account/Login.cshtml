@@ -1,0 +1,50 @@
+﻿@model ITMS.Model.ViewModels.AccountViewModel
+
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+<!DOCTYPE html>
+@using (Html.BeginForm("Login", "Account", FormMethod.Post))
+{
+    <html lang="en-us">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ITMS Login</title>
+        <link rel="stylesheet" href="~/Css/login.css">
+    </head>
+    <body>
+        <div class="loginDiv" style="background-color: #b782b7 ">
+          
+            <div class="loginBox" style="background-color: #b782b7 ">
+
+                <div class="loginLogo">
+                    <img src="~/Content/images/logo1.png" alt="CRB Logo">
+                </div>
+
+                <div class="formSection">
+                    <div class="inputBox">
+                        <label style="color:black">Email</label>
+                        <input type="Email" name="Email" placeholder="Email" />
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "errorMsg" })
+                    </div>
+
+                    <div class="inputBox">
+                        <label style="color:black">Password</label>
+                        <input type="password" name="password" placeholder="Password" />
+                        @Html.ValidationMessageFor(model => model.password, "", new { @class = "errorMsg" })
+                        @Html.ValidationSummary(true, "", new { @class = "errorMsg" })
+                    </div>
+
+                    <div class="inputBox btnInput">
+                        <button class="loginBtn" style="background-color: #915F6D ">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </body>
+</html>
+}
