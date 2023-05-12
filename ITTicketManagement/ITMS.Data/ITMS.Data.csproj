@@ -52,6 +52,7 @@
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="Interface\ILoginRepository.cs" />
+    <Compile Include="Interface\IRoleRepository.cs" />
     <Compile Include="Migrations\202305030939350_create tables.cs" />
     <Compile Include="Migrations\202305030939350_create tables.Designer.cs">
       <DependentUpon>202305030939350_create tables.cs</DependentUpon>
@@ -61,6 +62,7 @@
     <Compile Include="Infrastructure\IRepository.cs" />
     <Compile Include="Repository\LoginRepository.cs" />
     <Compile Include="Infrastructure\Repository.cs" />
+    <Compile Include="Repository\RoleRepositroy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -49,6 +49,10 @@ namespace ITMS.WebUI
             // container.RegisterType<IProductRepository, ProductRepository>();
             container.RegisterType <ILoginService, LoginService>();
             container.RegisterType<ILoginRepository, LoginRepository>();
+
+            container.RegisterType<IRoleRepository, RoleRepositroy>();
+            container.RegisterType<IRoleService, RoleService>();
+
         }
     }
 }

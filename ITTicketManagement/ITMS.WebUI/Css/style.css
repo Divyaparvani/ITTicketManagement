@@ -158,3 +158,6 @@ table tbody tr td { padding: 10px; font-weight: 400; font-size: 16px; line-heigh
 .side {
     margin: 1000px;
 }
+.btn btn-info {
+    margin: 400px;
+}

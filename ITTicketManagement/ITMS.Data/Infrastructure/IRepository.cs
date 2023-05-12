@@ -9,9 +9,9 @@ namespace ITMS.Data.Infrastructure
     {
         void Add(T t, bool autoSave);
         void Update(T t, bool autoSave);
-        void Delete(string Id, bool autoSave);
+        void Delete(Guid Id, bool autoSave);
         void SaveChanges();
-        T GetById(string Id);
+        T GetById(Guid Id);
         IQueryable<T> GetAll();
         IQueryable<T> GetWithWhere(Expression<Func<T, bool>> where);
     }
