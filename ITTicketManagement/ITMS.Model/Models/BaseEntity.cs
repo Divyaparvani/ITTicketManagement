@@ -11,6 +11,10 @@ namespace ITMS.Model.Models
         public DateTime? UpdatedOn { get; set; }
         public bool IsDeleted { get; set; }
         public bool IsActive { get; set; }
-
+        public BaseEntity()
+        {
+            Id = Guid.NewGuid();
+            CreatedOn = DateTime.Now;
+        }
     }
 }

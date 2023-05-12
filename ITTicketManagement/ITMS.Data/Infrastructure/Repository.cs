@@ -37,7 +37,7 @@ namespace ITMS.Data.Infrastructure
             }
         }
 
-        public void Delete(string Id, bool autoSave = true)
+        public void Delete(Guid Id, bool autoSave = true)
         {
             var t = GetById(Id);
             if (_context.Entry(t).State == EntityState.Detached)
@@ -56,7 +56,7 @@ namespace ITMS.Data.Infrastructure
             _context.SaveChanges();
         }
 
-        public T GetById(string Id)
+        public T GetById(Guid Id)
         {
             return _dbSet.Find(Id);
         }
@@ -70,6 +70,8 @@ namespace ITMS.Data.Infrastructure
         {
             return _dbSet.Where(where);
         }
+
+      
     }
 }
 

@@ -1,0 +1,96 @@
+﻿@model IEnumerable<ITMS.Model.Models.Roles>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<link rel="stylesheet" href="~/Css/style.css" />
+<link rel="stylesheet" href="~/Css/StyleSheet1.css" />
+<h2>Roles</h2>
+<br />
+<div>
+    <button>
+        @Html.ActionLink("Create New", "Create")
+    </button>
+</div>
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Code)
+        </th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Code)
+            </td>
+            <td>
+
+                <a href="@Url.Action("Edit","Role", new {Id=item.Id})" class="glyphicon glyphicon-pencil"></a>
+                <button type="button" class="glyphicon glyphicon-trash" data-toggle="modal" data-target="#exampleModal">
+                    
+                </button>
+                @*<a href="@Url.Action("Delete","Role", new {Id=item.Id})" class="glyphicon glyphicon-trash" data-toggle="modal" data-target="#exampleModal"></a>*@
+
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <!--<div class="modal-header">-->
+                            @*<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>*@
+                            <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>-->
+                            <div class="modal-body">
+                                <h4>Are you sure? you want to delete!</h4>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-success"> <a href="@Url.Action("Delete","Role", new {Id=item.Id})">delete</a></button>
+                                <button class="btn btn-danger">  @Html.ActionLink("Cancle", "Index")</button>
+                                @*<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    /* $('#exampleModal').modal(options)*/
+                    function Delete(Id) {
+                        debugger;
+                        var Id = $("#exampleModal").val()
+                        $.ajax({
+
+                            type: "POST",
+                            url: "/Role/Delete/" + Id,
+                            success: function () {
+                                $("#deleterole").modal('hide');
+                                $.ajax({
+                                    type: 'GET',
+                                    url: "/Role/Index",
+                                    success: function () {
+                                        location.reload()
+                                    }
+                                });
+                            }
+                        });
+                    }
+                </script>
+            </td>
+
+            
+        </tr>
+    }
+
+</table>

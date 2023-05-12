@@ -7,69 +7,84 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Styles.Render("~/Css/StyleSheet1.css")
+
     <link rel="stylesheet" href="~/Css/login.css">
     <link rel="stylesheet" href="~/Css/style.css" />
     <link rel="stylesheet" href="~/Css/StyleSheet1.css" />
+    <style>
+        .active, .btn:active{
+            background-color: gray;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <div class="mainDiv">
-       
+
         <div class="sidenavSection">
 
             <ul class="sidenav">
+
 
                 <img class="logo" src="~/Content/images/logo1.png" />
 
                 <li><a href="@Url.Action("Index", "Home")">Dashboard</a></li>
                 <li> <a href="@Url.Action("Index", "Home")">Settings</a></li>
 
+                <div id="myDIV">
+                    <div class="dropdown-btn">
+                        System
+                        <i class="glyphicon glyphicon-chevron-down"></i>
+                   
+</div>
+                    <div class="dropdown-container" onclick="myFunction(event)">
+                       <li > <a href="#" style="font-size:16px;"   onclick="myFunction(event)" class="btn active">Users</a></li>
+                <li ><a href="@Url.Action("Index", "Role")" style="font-size:16px;" class="btn active" >Roles</a></li>
+                <li >
+                    <a href="#" style="font-size:16px;"  class="btn active" > CommonLookup</a>
+                </li>
+        </div>
+    </div>
+    </div>
+    </ul>
+    <div>
+    <script>
+            function myFunction(event) {
+                e.target.className = "active";
+               
+                $('li a').addClass("active");
+            }
+      
+        </script>
+    
+    </div>
+    <div class="mainSection">
+        <header class="header">
+            <div class="userInfo">
+                <div class="align-center">
 
-                <button class="dropdown-btn">
-                    System
-                   <i class="glyphicon glyphicon-chevron-down"></i>
-                </button>
+                    @if (Session["Email"] != null)
+                    {
 
+        <div class="userName align-center">
+            <span>@Session["Email"]</span>
+            <div class="userInfoDiv">
+                <div class="userInfoBox">
 
-                <div class="dropdown-container">
-                    <a href="#">User</a>
-                    <a href="#">Role</a>
-                    <a href="#">CommonLookup</a>
+                    @Html.ActionLink("LogOff", "LogOff", "Account")
+                    @* @Html.ActionLink("FormMst","Index","FormMst")*@
 
                 </div>
-
-            </ul>
-
-        </div>
-
-        <div class="mainSection">
-            <header class="header">
-                        <div class="userInfo">
-                        <div class="align-center">
-                            
-                        @if (Session["Email"] != null)
-                        {
-                                <div class="userName align-center">
-                                    <span>@Session["Email"]</span>
-                                    <div class="userInfoDiv">
-                                        <div class="userInfoBox">
-                                            
-                                            @Html.ActionLink("LogOff", "LogOff", "Account")
-                                            @* @Html.ActionLink("FormMst","Index","FormMst")*@
-
-                                        </div>   
-                                   </div>
-                                </div>
-                        }
-                            </div>
-                           
-                            </div>
-                   
-            </header>
-            <div class="detailsSection">
-
             </div>
-        </div>
+        </div>}
+                </div>
+            </div>
 
+        </header>
+        <div class="detailsSection">
+            @RenderBody()
+        </div>
+    </div>
     </div>
 
     <script>
@@ -91,17 +106,17 @@
         }
 
     </script>
- 
-<div class="container">
-    @RenderBody()
-    <hr />
-    <footer>
-        <!--<p>&copy; @DateTime.Now.Year - My ASP.NET Application</p-->@*>*@
-    </footer>
-</div>
 
-@Scripts.Render("~/bundles/jquery")
-@Scripts.Render("~/bundles/bootstrap")
-@RenderSection("scripts", required: false)
+    <div class="container">
+
+        <hr />
+        <footer>
+            <!--<p>&copy; @DateTime.Now.Year - My ASP.NET Application</p-->@*>*@
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
 </body>
 </html>

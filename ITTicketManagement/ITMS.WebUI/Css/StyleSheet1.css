@@ -113,5 +113,7 @@ Add an active class to the active dropdown button
 .bodyimage {
     background-color: #f2e7f5;
 }
-
+.btn btn-info {
+    margin: 400px;
+}
 /*  }*/
