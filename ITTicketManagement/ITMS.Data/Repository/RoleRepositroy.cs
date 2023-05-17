@@ -3,7 +3,6 @@ using ITMS.Model.Models;
 using System;
 using System.Data.Entity;
 using System.Linq;
-using System.Linq.Expressions;
 
 namespace ITMS.Data.Repository
 {
@@ -20,8 +19,7 @@ namespace ITMS.Data.Repository
 
         public void Add(Roles roles)
         {
-            _dbSet.Add(roles);
-            
+            _dbSet.Add(roles);  
         }
 
         public IQueryable<Roles> GetAll()
@@ -32,11 +30,6 @@ namespace ITMS.Data.Repository
         public Roles GetById(Guid Id)
         {
             return _dbSet.Find(Id);
-        }
-
-        public IQueryable<Roles> GetWithWhere(Expression<Func<Roles, bool>> where)
-        {
-            return _dbSet.Where(where);
         }
 
         public void SaveChanges()
@@ -50,19 +43,6 @@ namespace ITMS.Data.Repository
             context.Entry(roles).State = EntityState.Modified;
            
         }
-
-        public void Delete(Guid Id, bool autoSave = true)
-        {
-            var t = GetById(Id);
-            if (context.Entry(t).State == EntityState.Detached)
-            {
-                _dbSet.Attach(t);
-            }
-            _dbSet.Remove(t);
-            if (autoSave)
-            {
-                context.SaveChanges();
-            }
-        }
+  
     }
 }

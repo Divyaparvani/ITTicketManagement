@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 namespace ITMS.Model.Models
 {
-    public class Users : BaseEntity
+    public class User : BaseEntity
     {
         [Required]
         public string FirstName { get; set; }

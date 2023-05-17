@@ -53,9 +53,27 @@
     <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="Interface\ILoginRepository.cs" />
     <Compile Include="Interface\IRoleRepository.cs" />
+    <Compile Include="Interface\IUserRepository.cs" />
+    <Compile Include="Interface\IUserRoleRepository.cs" />
     <Compile Include="Migrations\202305030939350_create tables.cs" />
     <Compile Include="Migrations\202305030939350_create tables.Designer.cs">
       <DependentUpon>202305030939350_create tables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305150807335_Userrole.cs" />
+    <Compile Include="Migrations\202305150807335_Userrole.Designer.cs">
+      <DependentUpon>202305150807335_Userrole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305160532094_login.cs" />
+    <Compile Include="Migrations\202305160532094_login.Designer.cs">
+      <DependentUpon>202305160532094_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305160607576_Users-user-roles11.cs" />
+    <Compile Include="Migrations\202305160607576_Users-user-roles11.Designer.cs">
+      <DependentUpon>202305160607576_Users-user-roles11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202305160608321_Users-user-roles12.cs" />
+    <Compile Include="Migrations\202305160608321_Users-user-roles12.Designer.cs">
+      <DependentUpon>202305160608321_Users-user-roles12.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,6 +81,8 @@
     <Compile Include="Repository\LoginRepository.cs" />
     <Compile Include="Infrastructure\Repository.cs" />
     <Compile Include="Repository\RoleRepositroy.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="Repository\UserRoleRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -77,6 +97,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202305030939350_create tables.resx">
       <DependentUpon>202305030939350_create tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305150807335_Userrole.resx">
+      <DependentUpon>202305150807335_Userrole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305160532094_login.resx">
+      <DependentUpon>202305160532094_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305160607576_Users-user-roles11.resx">
+      <DependentUpon>202305160607576_Users-user-roles11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202305160608321_Users-user-roles12.resx">
+      <DependentUpon>202305160608321_Users-user-roles12.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
