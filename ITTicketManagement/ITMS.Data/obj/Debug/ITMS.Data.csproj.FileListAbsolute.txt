@@ -14,3 +14,7 @@ D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\bin\Debug\ITMS.Model
 D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\bin\Debug\ITMS.Model.pdb
 D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\obj\Debug\ITMS.Data.Migrations.createtables.resources
 D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\obj\Debug\ITMS.Data.csproj.GenerateResource.cache
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\obj\Debug\ITMS.Data.Migrations.Userrole.resources
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\obj\Debug\ITMS.Data.Migrations.login.resources
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\obj\Debug\ITMS.Data.Migrations.Usersuserroles11.resources
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\obj\Debug\ITMS.Data.Migrations.Usersuserroles12.resources

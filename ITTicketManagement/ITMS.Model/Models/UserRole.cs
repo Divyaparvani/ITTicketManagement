@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ITMS.Model.Models
 {
-   public class UserRoles : BaseEntity
+   public class UserRole: BaseEntity
     { 
-        public string UserId { get; set; }
-        public string RoleId { get; set; }
+        public Guid UserId { get; set; }
+        public Guid RoleId { get; set; }
 
     }
 }

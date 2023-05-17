@@ -14,7 +14,7 @@ namespace ITMS.Services.Services
             _loginRepository = loginRepository;
         }
 
-        public Users Login(AccountViewModel model)
+        public User Login(AccountViewModel model)
         {
            return _loginRepository.Login(model);
         }

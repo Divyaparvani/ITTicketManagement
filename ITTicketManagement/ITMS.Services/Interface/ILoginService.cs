@@ -5,6 +5,6 @@ namespace ITMS.Services.Interface
 {
     public  interface ILoginService 
     {
-        Users Login(AccountViewModel model);
+        User Login(AccountViewModel model);
     }
 }

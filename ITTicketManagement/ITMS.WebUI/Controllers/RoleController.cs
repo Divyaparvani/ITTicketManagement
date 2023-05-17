@@ -22,10 +22,12 @@ namespace ITMS.WebUI.Controllers
             List<Roles> roles = RoleService.GetRoleList().ToList();
             return View(roles);
         }
+
         public ActionResult Create()
-        {
-            return View();
+        {   
+            return View(new RoleViewmodel());
         }
+
         [HttpPost]
         public ActionResult Create(RoleViewmodel model)
         {
