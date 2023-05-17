@@ -17,23 +17,23 @@
         <link rel="stylesheet" href="~/Css/login.css">
     </head>
     <body>
-        <div class="loginDiv" style="background-color: #b782b7 ">
+        <div class="loginDiv" style="background-color: black ">
           
-            <div class="loginBox" style="background-color: #b782b7 ">
+            <div class="loginBox" style="background-color: white ">
 
                 <div class="loginLogo">
-                    <img src="~/Content/images/logo1.png" alt="CRB Logo">
+                    <img src="~/Content/images/ITSMS-removebg-preview.png" alt="CRB Logo">
                 </div>
 
-                <div class="formSection">
+               <div class="formSection">
                     <div class="inputBox">
-                        <label style="color:black">Email</label>
+                        <label style="color: #915F6D">Email</label>
                         <input type="Email" name="Email" placeholder="Email" />
                         @Html.ValidationMessageFor(model => model.Email, "", new { @class = "errorMsg" })
                     </div>
 
                     <div class="inputBox">
-                        <label style="color:black">Password</label>
+                        <label style="color: #915F6D">Password</label>
                         <input type="password" name="password" placeholder="Password" />
                         @Html.ValidationMessageFor(model => model.password, "", new { @class = "errorMsg" })
                         @Html.ValidationSummary(true, "", new { @class = "errorMsg" })
@@ -44,7 +44,7 @@
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
     </body>
 </html>
 }

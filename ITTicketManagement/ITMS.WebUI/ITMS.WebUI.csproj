@@ -161,11 +161,14 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\bg2.jfif" />
+    <Content Include="Content\images\bggg.jfif" />
     <Content Include="Content\images\down-arrow.svg" />
     <Content Include="Content\images\download %281%29.jfif" />
     <Content Include="Content\images\edit.svg" />
     <Content Include="Content\images\eye.svg" />
+    <Content Include="Content\images\images %281%29.jfif" />
     <Content Include="Content\images\ITMS_MIN.png" />
+    <Content Include="Content\images\ITSMS-removebg-preview.png" />
     <Content Include="Content\images\key.svg" />
     <Content Include="Content\images\login-bg.jpg" />
     <Content Include="Content\images\logo.svg" />

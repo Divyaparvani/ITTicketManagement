@@ -20,8 +20,8 @@ input:focus-visible, input:focus { outline: none;}
 
 
 /************** Login **************/
-.loginDiv { display: flex; align-items: center; justify-content: center; height: 100vh; background: url('../Content/images/download (1).jfif') no-repeat center/cover; } 
-.loginLogo { width: 130px; margin: 0 auto 35px; animation: 0; text-align: center; }
+.loginDiv { display: flex; align-items: center; justify-content: center; height: 100vh; background: url('../Content/images/images (1).jfif') no-repeat center/cover; } 
+.loginLogo { width: 170px; margin: 0 auto 35px; animation: 0; text-align: center; height:200px;}
 
 .loginBox {
     margin: 0 auto;
