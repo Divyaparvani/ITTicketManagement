@@ -89,9 +89,9 @@
         </div>*@
 
         <div class="form-group">
-            @Html.LabelFor(model => model.RoleName, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.RoleId, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownListFor(model => model.RoleName, new SelectList(Model.RoleDropDown,"Id","Name"), "Select Role", new { @class = "Form-Cantrol" })
+                @Html.DropDownListFor(model => model.RoleId, new SelectList(Model.RoleDropDown,"Id","Name"), "Select Role", new { @class = "Form-Cantrol" })
       
             </div>
             </div>
@@ -100,7 +100,7 @@
        <div class="form-group">
            <div class="col-md-offset-2 col-md-10">
                <input type = "submit" value="save" class="btn btn-success" />
-               <input type = "submit" value="Cancle" class="btn btn-danger" />
+               <button class="btn-danger"><a href="/User/Index" value="Cancle" style="color:white">cancle</a></button>
             @*<button class="btn btn-danger" style="color:white">  @Html.ActionLink("Cancle", "Index")</button>*@
 </div>
 </div>

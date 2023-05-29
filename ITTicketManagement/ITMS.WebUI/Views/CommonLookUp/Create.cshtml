@@ -1,0 +1,127 @@
+﻿@model ITMS.Model.ViewModels.CommonLookUpViewModel
+@{
+    Layout = null;
+}
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+<style>
+    .padding-b-10 {
+        padding-bottom: 10px;
+    }
+</style>
+
+<div class="modal-header">
+
+    <h5 class="modal-title">add common lookup</h5>
+    <button type="button" class="close" data-dismiss="modal">
+        <span class="close" data-dismiss="modal">x</span>
+    </button>
+</div>
+<div class="modal-body" style="background-color:aliceblue">
+    <form id="myform" name="myform">
+
+        <div class="row">
+            <div class="form-group">
+                <label class = "control-label col-md-3">Config Name</label>
+                @*@Html.LabelFor(model => model.ConfigName, htmlAttributes: new { @class = "control-label col-md-3" })*@
+                <div class="col-md-9 padding-b-10">
+                    @Html.EditorFor(model => model.ConfigName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter config-Name" ,@id= "ConfigName", @onkeyup= "validationmessage()" } })
+                    <span id="configNameError" style="color:red"></span>
+                    @Html.ValidationMessageFor(model => model.ConfigName, "", new { @class = "text-danger",@id="confignameerr" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-3">Config Key</label>
+                @*@Html.LabelFor(model => model.ConfigKey, htmlAttributes: new { @class = "control-label col-md-3" })*@
+                <div class="col-md-9 padding-b-10">
+                    @Html.EditorFor(model => model.ConfigKey, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter Config-key", @id = "ConfigKey", @onkeyup = "validationmessage()" } })
+                    <span id="configKeyError" style="color:red"></span>
+                    @Html.ValidationMessageFor(model => model.ConfigKey, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-3">Config Value</label>
+                @*@Html.LabelFor(model => model.ConfigValue, htmlAttributes: new { @class = "control-label col-md-3" })*@
+                <div class="col-md-9 padding-b-10">
+                    @Html.EditorFor(model => model.ConfigValue, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter Config-Value", @id = "ConfigValue", @onkeyup = "validationmessage()" } })
+                    <span id="configValueError" style="color:red"></span>
+                    @Html.ValidationMessageFor(model => model.ConfigValue, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-3">Display Order</label>
+                @*@Html.LabelFor(model => model.DisplayOrder, htmlAttributes: new { @class = "control-label col-md-3" })*@
+                <div class="col-md-9 padding-b-10">
+                    @Html.EditorFor(model => model.DisplayOrder, new { htmlAttributes = new { @class = "form-control", @placeholder = "0" } })
+                    @Html.ValidationMessageFor(model => model.DisplayOrder, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-3">Description</label>
+                @*@Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-3" })*@
+                <div class="col-md-9 padding-b-10">
+                    @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter Description" } })
+                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="modal-footer">
+    <div id="displayerr" class="text text-danger"></div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button id="btnsubmit" class="btn btn-success">Submit</button>
+            <button type="submit" class="btn btn-danger" onclick="closemodal()" data-dismiss="modal">close</button>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $("#btnsubmit").click(function () {
+            var myformdata = $("#myform").serialize();
+            $.ajax({
+                type: "POST",
+                url: "/CommonLookUp/Create",
+                data: myformdata,
+                success: function (res) {
+                    debugger;
+                    if (res == '') {
+                        location.reload();
+                        $("#addclp").modal("hide");
+                    }
+                    else if (res == "Already Exists") {
+                        var myDiv = $("#displayerr");
+                        var paragraph = document.createElement("p");
+                        paragraph.textContent = "Already Exists!";
+                        myDiv.empty();
+                        myDiv.append(paragraph);
+                    }
+                    else {
+                        validationmessage();
+
+                        //var myDiv = $("#displayerr");
+                        //var paragraph = document.createElement("p");
+                        //paragraph.textContent = "Nulllll!";
+                        //myDiv.append(paragraph);
+                    }
+                }
+            })
+        }
+       )
+    })
+
+    function validationmessage() {        if (displayerr) {            var configName = $("#ConfigName").val();            var configKey = $("#ConfigKey").val();            var configValue = $("#ConfigValue").val();            if (configName == '') {                $("#configNameError").text("Config Name is required.")            }            else {                $("#configNameError").text("")            }            if (configKey == '') {                $("#configKeyError").text("Config Key is required.")            }            else {                $("#configKeyError").text("")            }            if (configValue == '') {                $("#configValueError").text("Config Value is required.")            }            else {                $("#configValueError").text("")            }        }    }
+
+</script>
+@*@section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }*@
+
+

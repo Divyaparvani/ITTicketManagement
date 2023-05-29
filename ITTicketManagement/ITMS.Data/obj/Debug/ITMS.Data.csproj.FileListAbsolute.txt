@@ -18,3 +18,4 @@ D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\obj\Debug\ITMS.Data.
 D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\obj\Debug\ITMS.Data.Migrations.login.resources
 D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\obj\Debug\ITMS.Data.Migrations.Usersuserroles11.resources
 D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\obj\Debug\ITMS.Data.Migrations.Usersuserroles12.resources
+D:\Projects\ITTicketManagement\ITTicketManagement\ITMS.Data\obj\Debug\ITMS.Data.Migrations.CommonLookUp.resources

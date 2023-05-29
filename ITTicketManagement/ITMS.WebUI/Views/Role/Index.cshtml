@@ -57,11 +57,12 @@
                                 <h4>Are you sure? you want to delete!</h4>
                             </div>
                             <div class="modal-footer">
-                                <button class="btn btn-success"> <a href="@Url.Action("Delete","Role", new {Id=item.Id})">delete</a></button>
-                                <button class="btn btn-danger">  @Html.ActionLink("Cancle", "Index")</button>
-                                @*<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>*@
-                            </div>
+                                <button class="btn btn-success"> <a href="@Url.Action("Delete","Role", new {Id=item.Id})" style="color:white">delete</a></button>
+                                
+                                    <button class="btn-danger"><a href="/Role/Index" value="Cancle" style="color:white">cancle</a></button>
+                                    @*<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>*@
+</div>
                         </div>
                     </div>
                 </div>

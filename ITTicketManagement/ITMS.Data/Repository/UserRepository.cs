@@ -12,7 +12,7 @@ namespace ITMS.Data.Repository
     {
         public UserRepository(DataContext context) : base(context)
         {
-
+            _context = context;
         }
 
         public User GetUserById(Guid id)
@@ -32,7 +32,7 @@ namespace ITMS.Data.Repository
 
         public List<UserViewModel> GetAllUsers()
         {
-            return (from u in _dbSet
+            var list= (from u in _context.Users
                     join ur in _context.UserRoles
                     on u.Id equals ur.UserId
                     join r in _context.Roles 
@@ -52,6 +52,7 @@ namespace ITMS.Data.Repository
                         Gender = u.Gender,
                         MobileNo = u.MobileNo
                     }).ToList();
+            return list;
         }
 
         public UserViewModel GetUserForEdit(Guid id)

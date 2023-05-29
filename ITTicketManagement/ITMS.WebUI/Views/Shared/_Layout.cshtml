@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="~/Css/style.css" />
     <link rel="stylesheet" href="~/Css/StyleSheet1.css" />
     <style>
-        .active, .btn:active{
+        .active, .btn:active {
             background-color: gray;
             color: white;
         }
@@ -20,12 +20,11 @@
 </head>
 <body>
     <div class="mainDiv">
-
         <div class="sidenavSection">
+            <div class="logo">
+                <img src="~/Content/images/logo1.png" alt="">
+            </div>
             <ul class="sidenav">
-
-
-                <img class="logo" src="~/Content/images/logo1.png" />
 
                 <li><a href="@Url.Action("Index", "Home")">Dashboard</a></li>
                 <li> <a href="@Url.Action("Index", "Home")">Settings</a></li>
@@ -34,77 +33,48 @@
                     <div class="dropdown-btn">
                         System
                         <i class="glyphicon glyphicon-chevron-down"></i>
-                   
-</div>
+
+                    </div>
                     <div class="dropdown-container" onclick="myFunction(event)">
-                       <li > <a href="@Url.Action("Index", "User")" style="font-size:16px;"   class="btn active">Users</a></li>
-                <li ><a href="@Url.Action("Index", "Role")" style="font-size:16px;" class="btn active" >Roles</a></li>
-                <li >
-                    <a href="#" style="font-size:16px;"  class="btn active" > CommonLookup</a>
+                <li> <a href="@Url.Action("Index", "User")" style="font-size:16px;" class="btn active">Users</a></li>
+                <li><a href="@Url.Action("Index", "Role")" style="font-size:16px;" class="btn active">Roles</a></li>
+                <li>
+                    <a href="@Url.Action("Index", "CommonLookUp")" style="font-size:16px;" class="btn active"> CommonLookup</a>
                 </li>
+            </ul>
+        </div>
+        <div class="mainSection">
+            <header class="header">
+                <div class="align-right">
+                   
+                    <div class="userInfo">
+                        <div class="align-center">                          
+                            @if (Session["Email"] != null)
+                            {
+
+                            <div class="userName align-center">
+                            <div class="profileImg">D </div>
+                                <span class="userNameText">@Session["Email"]</span>
+                                <div class="userInfoDiv">
+                                    <div class="userInfoBox">
+
+                                        @Html.ActionLink("LogOff", "LogOff", "Account")
+                                        @* @Html.ActionLink("FormMst","Index","FormMst")*@
+
+                                    </div>
+                                </div>
+                            </div>}
+                        </div>
+                    </div>
+                </div>
+
+            </header>
+            <div class="detailsSection">
+                @RenderBody()
+            </div>
         </div>
     </div>
-    </div>
-    </ul>
-    <div>
-    <script>
-            function myFunction(event) {
-                e.target.className = "active";
-               
-                $('li a').addClass("active");
-            }
-      
-        </script>
-    
-    </div>
-    <div class="mainSection">
-        <header class="header">
-            <div class="userInfo">
-                <div class="align-center">
 
-                    @if (Session["Email"] != null)
-                    {
-
-        <div class="userName align-center">
-            <span>@Session["Email"]</span>
-            <div class="userInfoDiv">
-                <div class="userInfoBox">
-
-                    @Html.ActionLink("LogOff", "LogOff", "Account")
-                    @* @Html.ActionLink("FormMst","Index","FormMst")*@
-
-                </div>
-            </div>
-        </div>}
-                </div>
-            </div>
-
-        </header>
-        <div class="detailsSection">
-            @RenderBody()
-        </div>
-    </div>
-    </div>
-
-    <script>
-
-        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-        var dropdown = document.getElementsByClassName("dropdown-btn");
-        var i;
-
-        for (i = 0; i < dropdown.length; i++) {
-            dropdown[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                var dropdownContent = this.nextElementSibling;
-                if (dropdownContent.style.display === "block") {
-                    dropdownContent.style.display = "none";
-                } else {
-                    dropdownContent.style.display = "block";
-                }
-            });
-        }
-
-    </script>
 
     <div class="container">
 
@@ -119,3 +89,32 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+
+<script>
+    function myFunction(event) {
+        e.target.className = "active";
+
+        $('li a').addClass("active");
+    }
+
+</script>
+<script>
+
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+
+</script>

@@ -1,0 +1,141 @@
+﻿@model IEnumerable<ITMS.Model.Models.CommonLookUp>
+
+<style>
+    .btncreate{
+        color:white;
+       border-radius:70px;
+    }
+</style>
+<div>
+    <div class="modal fade" id="addclp">
+        <div class="modal-dialog">
+            <div class="modal-content" id="addclp2">
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary" data-toggle="modal" onclick="create()" style="background-color: #ba68e7">Create new</button>
+
+    <br />
+    <br />
+
+    <table class="table">
+        <tr>
+            <th>
+                <label>Config Name</label>
+                @*@Html.DisplayNameFor(model => model.ConfigName)*@
+            </th>
+            <th>
+                <label>Config Key</label>
+                @*@Html.DisplayNameFor(model => model.ConfigKey)*@
+            </th>
+            <th>
+                <label>Config Value</label>
+                @*@Html.DisplayNameFor(model => model.ConfigValue)*@
+            </th>
+            <th>
+                <label>Display Order</label>
+                @*@Html.DisplayNameFor(model => model.DisplayOrder)*@
+            </th>
+            <th>
+                <label>Description</label>
+                @*@Html.DisplayNameFor(model => model.Description)*@
+            </th>
+            <th>Action</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ConfigName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ConfigKey)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ConfigValue)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DisplayOrder)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+
+                    @*<a href="@Url.Action("Edit","CommonLookUp", new {Id=item.Id})" class="glyphicon glyphicon-pencil" onclick="Edit('@item.Id')" data-toggle="modal"></a>*@
+                    <a class="glyphicon glyphicon-pencil" onclick="Edit1('@item.Id')"></a>
+                    <button type="button" class="glyphicon glyphicon-trash" data-toggle="modal" data-target="#exampleModal">
+                    </button>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+
+                                <div class="modal-body">
+                                    <h4>Are you sure? you want to delete!</h4>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-success"> <a href="@Url.Action("Delete", "CommonLookUp", new { Id = item.Id })" style="color:white">delete</a></button>
+                                    <button class="btn-danger"><a href="/CommonLookUp/Index" value="Cancle" style="color:white">cancle</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        /* $('#exampleModal').modal(options)*/
+                        function Delete(Id) {
+                            debugger;
+                            $.ajax({
+
+                                type: "POST",
+                                url: "/CommonLookUp/Delete/" + Id,
+                                success: function () {
+                                    $("#deleterole").modal('hide');
+                                    $.ajax({
+                                        type: 'GET',
+                                        url: "/CommonLookUp/Index",
+                                        success: function () {
+                                            location.reload()
+                                        }
+                                    });
+                                }
+                            });
+                        }
+                    </script>
+                </td>
+            </tr>
+        }
+    </table>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+
+        function create() {
+            url = "/CommonLookUp/Create",
+            type= 'Get',
+                $('#addclp2').load(url, function () {
+                $("#addclp").modal("show");
+            });
+
+    }
+    function Edit1(Id) {
+        url = "/CommonLookUp/Edit?Id=" + Id
+        type = 'Get',
+        $('#addclp2').load(url, function () {
+            $('#addclp').modal('show');
+
+    });
+    }
+
+    function closemodal() {
+        debugger;
+        location.reload();
+    }
+
+    function updateclose() {
+        location.reload();
+    }
+</script>
+
