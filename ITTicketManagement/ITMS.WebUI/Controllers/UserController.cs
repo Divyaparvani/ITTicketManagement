@@ -15,7 +15,6 @@ namespace ITMS.WebUI.Controllers
             _userService = userService;
         }
 
-        // GET: Role
         public ActionResult Index()
         {
             List<UserViewModel> users = _userService.GetAllUsers();
@@ -43,11 +42,8 @@ namespace ITMS.WebUI.Controllers
                 model.RoleDropDown = _userService.GetRolesForDropDown();
                 return View(model);
             }
-            else
-            {
-                //_userService.CreateUser(model);
+                  //_userService.CreateUser(model);
                 return RedirectToAction("Index", "User");
-            }
         }
 
         public ActionResult Edit(Guid id)

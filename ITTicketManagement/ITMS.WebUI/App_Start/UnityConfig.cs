@@ -58,6 +58,10 @@ namespace ITMS.WebUI
 
             container.RegisterType<IUserRoleRepository, UserRoleRepository>();
             container.RegisterType<IUserRoleService, UserRoleService>();
+
+            container.RegisterType<ICommonLookUpRepository, CommonLookUpRepository>();
+            container.RegisterType<ICommonLookupService, CommonLookUpService>();
         }
     }
+    
 }

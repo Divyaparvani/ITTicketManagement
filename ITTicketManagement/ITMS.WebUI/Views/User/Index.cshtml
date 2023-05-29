@@ -79,10 +79,11 @@
                                 <h4>Are you sure? you want to delete!</h4>
                             </div>
                             <div class="modal-footer">
-                                <button class="btn btn-success"> <a href="@Url.Action("Delete","User", new {Id=item.Id})">delete</a></button>
-                                <button class="btn btn-danger">  @Html.ActionLink("Cancle", "Index")</button>
+                                <button class="btn btn-success"> <a href="@Url.Action("Delete","User", new {Id=item.Id})" style="color:white">delete</a></button>
+                                <button class="btn btn-danger"><a href="/User/Index" value="Cancle" style="color:white">cancle</a></button>
 
-                            </div>
+
+</div>
                         </div>
                     </div>
                 </div>

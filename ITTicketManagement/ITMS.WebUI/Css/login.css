@@ -21,7 +21,7 @@ input:focus-visible, input:focus { outline: none;}
 
 /************** Login **************/
 .loginDiv { display: flex; align-items: center; justify-content: center; height: 100vh; background: url('../Content/images/images (1).jfif') no-repeat center/cover; } 
-.loginLogo { width: 170px; margin: 0 auto 35px; animation: 0; text-align: center; height:200px;}
+.loginLogo { width: 170px; margin: 0 auto 35px; animation: 0; text-align: center; height:100px;}
 
 .loginBox {
     margin: 0 auto;

@@ -24,7 +24,7 @@ namespace ITMS.Services.Services
 
         public List<UserViewModel> GetAllUsers()
         {
-            return _userRepository.GetAllUsers();
+            return _userRepository.GetAllUsers().ToList();
         }
 
         public string CreateUser(UserViewModel model)

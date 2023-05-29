@@ -9,8 +9,8 @@ namespace ITMS.Data.Infrastructure
     public class Repository<T> : IRepository<T> where T : BaseEntity
    
     {
-        internal DataContext _context;
-        internal DbSet<T> _dbSet;
+        public DataContext _context;
+        public DbSet<T> _dbSet;
 
         public Repository(DataContext context)
         {
@@ -63,7 +63,7 @@ namespace ITMS.Data.Infrastructure
 
         public IQueryable<T> GetAll()
         {
-            return _dbSet;
+            return _dbSet;/*.Where(x=>x.IsDeleted==true);*/
         }
 
         public IQueryable<T> GetWithWhere(Expression<Func<T, bool>> where)
